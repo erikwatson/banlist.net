@@ -66,5 +66,37 @@
           <p>An <a href="https://erikwatson.me">Erik Watson</a> project</p>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@erikwatson/snowfall@4/dist/index.min.js"></script>
+    <script>
+      const config = {
+        layers: [
+          {
+            colour: "#8d90b7",
+            opacity: { from: 1, to: 1 },
+            wind: {
+              gusts: {
+                changeChance: 0.25
+              }
+            }
+          },
+          {
+            opacity: { from: 1, to: 1 },
+            wind: {
+              gusts: {
+                changeChance: 0.25
+              }
+            }
+          }
+        ]
+      }
+
+      const schedule = { 
+        from: { month: 12, day: 1 }, 
+        to: { month: 12, day: 31 } 
+      }
+      
+      snowfall.schedule(schedule, config)
+    </script>
   </body>
   </html>
